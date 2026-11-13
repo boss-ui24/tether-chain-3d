@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tether — websites you can grab</title>
+<meta name="description" content="Concept site for Tether, a fictional web studio. A chrome chain in real-time 3D runs through every section and slides as you scroll; the light changes from white to red to cyan.">
+<meta name="theme-color" content="#e9e9e9">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tether — websites you can grab">
+<meta property="og:description" content="A fictional web studio with a 3D chain that runs through the whole site.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23d7262d'/%3E%3Crect x='7' y='4' width='10' height='16' rx='5' fill='none' stroke='%23fff' stroke-width='2.6'/%3E%3Crect x='15' y='12' width='10' height='16' rx='5' fill='none' stroke='%23fff' stroke-width='2.6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
+<script>document.documentElement.classList.replace('no-js', 'js');</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<canvas id="gl" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+<div class="loader" aria-hidden="true">
+  <div class="loader__mark">
+    <i class="mark"><svg viewBox="0 0 32 32"><rect x="7" y="4" width="10" height="16" rx="5"/><rect x="15" y="12" width="10" height="16" rx="5"/></svg></i>
+    <span class="loader__num">000</span>
+  </div>
+</div>
+
+<header class="nav">
+  <a class="nav__brand" href="#top" aria-label="Tether, back to top">
+    <i class="mark"><svg viewBox="0 0 32 32"><rect x="7" y="4" width="10" height="16" rx="5"/><rect x="15" y="12" width="10" height="16" rx="5"/></svg></i>
+    <span>tether</span>
+  </a>
+  <nav class="nav__links" aria-label="Sections">
+    <a href="#studio"><sup>01</sup>Studio</a>
+    <a href="#work"><sup>02</sup>Work</a>
+    <a href="#contact"><sup>03</sup>Contact</a>
+  </nav>
+  <a class="btn btn--sm nav__cta" href="#contact">Let's talk <i><svg viewBox="0 0 16 16"><path d="M3 13 13 3M6 3h7v7"/></svg></i></a>
+</header>
+
+<main id="main">
+
+<section class="hero" id="top">
+  <div class="hero__grid wrap">
+    <div class="hero__copy">
+      <p class="eyebrow rv" style="--d:0s">(Studio reel, vol. 01)</p>
+      <h1 class="h1 rv" style="--d:.08s">We build websites you can <em>grab.</em></h1>
+      <div class="hero__cta rv" style="--d:.22s">
+        <a class="btn" href="#work">See the work <i><svg viewBox="0 0 16 16"><path d="M3 13 13 3M6 3h7v7"/></svg></i></a>
+        <a class="btn btn--ghost" href="#contact">Start a project <i><svg viewBox="0 0 16 16"><path d="M3 13 13 3M6 3h7v7"/></svg></i></a>
+      </div>
+      <div class="hero__scroll rv" style="--d:.7s" aria-hidden="true"><span>Scroll</span><i></i><span>Pull the chain</span></div>
+    </div>
+    <div class="hero__stage" aria-hidden="true"></div>
+    <aside class="hero__aside">
+      <div class="hero__stats rv" style="--d:.3s">
+        <div class="stat"><b>100%</b><small>Made to order.<br>No templates, ever.</small></div>
+        <div class="stat"><b>3D</b><small>Real-time scenes<br>that run in the browser.</small></div>
+      </div>
+      <p class="hero__text rv" style="--d:.38s">Tether is an independent studio. We design and build tactile, three-dimensional websites for brands that refuse to look like a template.</p>
+    </aside>
+  </div>
+  <div class="hero__word rv" style="--d:.42s" aria-hidden="true">TETHER</div>
+</section>
+
+<section class="studio" id="studio">
+  <div class="wrap">
+    <div class="sec-head rv"><span>(01) Studio</span><span>What we do</span></div>
+    <div class="studio__floats" aria-hidden="true">
+      <figure class="float float--a"><div class="float__frame" data-scene="chain" data-tone="navy"></div><figcaption>Loop — product film, 2025</figcaption></figure>
+      <figure class="float float--b"><div class="float__frame" data-scene="cluster" data-tone="dark"></div><figcaption>Keyframe — brand system, 2026</figcaption></figure>
+    </div>
+    <div class="studio__body">
+      <div class="studio__lead">
+        <h2 class="h2 rv" data-scramble>Every pixel has <em>weight.</em> Every scroll leaves a mark.</h2>
+        <p class="lead rv">We treat a web page like an object. It has material, light and momentum, and scroll is the hand that moves it.</p>
+      </div>
+      <div class="studio__side" aria-hidden="true">
+        <figure class="float float--c"><div class="float__frame" data-scene="keys" data-tone="white"></div></figure>
+        <figure class="float float--d"><div class="float__frame" data-scene="star" data-tone="red"></div></figure>
+      </div>
+    </div>
+    <ul class="svc rv">
+      <li>
+        <button class="svc__btn" type="button" aria-expanded="true" aria-controls="svc1"><span class="svc__n">(01)</span><span class="svc__t">Art direction</span><i class="svc__i"></i></button>
+        <div class="svc__body" id="svc1"><p>Concepts and visual systems that give a brand a real, physical presence online.</p></div>
+      </li>
+      <li>
+        <button class="svc__btn" type="button" aria-expanded="false" aria-controls="svc2"><span class="svc__n">(02)</span><span class="svc__t">Web design</span><i class="svc__i"></i></button>
+        <div class="svc__body" id="svc2"><p>Layouts with hierarchy, rhythm and room to breathe. Designed in the browser, not in a slide deck.</p></div>
+      </li>
+      <li>
+        <button class="svc__btn" type="button" aria-expanded="false" aria-controls="svc3"><span class="svc__n">(03)</span><span class="svc__t">3D and motion</span><i class="svc__i"></i></button>
+        <div class="svc__body" id="svc3"><p>Real-time scenes, materials and light that react to scroll, cursor and time. One draw call where one is enough.</p></div>
+      </li>
+      <li>
+        <button class="svc__btn" type="button" aria-expanded="false" aria-controls="svc4"><span class="svc__n">(04)</span><span class="svc__t">Development</span><i class="svc__i"></i></button>
+        <div class="svc__body" id="svc4"><p>Hand-written front end. Fast on a phone, honest in a Lighthouse report, easy to hand over.</p></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Art direction</span><i></i><span>Web design</span><i></i><span>3D and motion</span><i></i><span>Development</span><i></i><span>WebGL</span><i></i><span>Brand systems</span><i></i><span>E-commerce</span><i></i>
+    <span>Art direction</span><i></i><span>Web design</span><i></i><span>3D and motion</span><i></i><span>Development</span><i></i><span>WebGL</span><i></i><span>Brand systems</span><i></i><span>E-commerce</span><i></i>
+  </div>
+</div>
+
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="sec-head rv"><span>(02) Work</span><span>Selected, 2024 — 2026</span></div>
+    <h2 class="h2 work__title rv" data-scramble>Recent <em>launches</em></h2>
+    <ol class="work__grid">
+      <li class="card card--1"><div class="card__frame" data-scene="star" data-tone="red"></div><div class="card__meta"><span>01</span><b>Brand launch</b><span>Atlas Keys · identity, 3D, web</span></div></li>
+      <li class="card card--2"><div class="card__frame" data-scene="pendant" data-tone="dark"></div><div class="card__meta"><span>02</span><b>Online store</b><span>Mono Caps · e-commerce</span></div></li>
+      <li class="card card--3"><div class="card__frame" data-scene="keys" data-tone="white"></div><div class="card__meta"><span>03</span><b>Product reveal</b><span>Linkworks · launch site</span></div></li>
+      <li class="card card--4"><div class="card__frame" data-scene="chain" data-tone="navy"></div><div class="card__meta"><span>04</span><b>Interactive world</b><span>Nullfield · WebGL experience</span></div></li>
+      <li class="card card--5"><div class="card__frame" data-scene="cluster" data-tone="red"></div><div class="card__meta"><span>05</span><b>Campaign site</b><span>Red Pendant · microsite</span></div></li>
+      <li class="card card--6"><div class="card__frame" data-scene="ring" data-tone="dark"></div><div class="card__meta"><span>06</span><b>Studio portfolio</b><span>Halide Lab · portfolio</span></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="sec-head rv"><span>(03) Contact</span><span>Baku — remote worldwide</span></div>
+    <div class="contact__grid">
+      <div class="contact__copy">
+        <h2 class="h2 rv" data-scramble>Let's build something people want to <em>hold.</em></h2>
+        <p class="lead rv">Tell us what you're launching. We reply within two working days.</p>
+        <p class="rv"><a class="btn btn--cyan" href="mailto:hello@tether.studio">Start a project <i><svg viewBox="0 0 16 16"><path d="M3 13 13 3M6 3h7v7"/></svg></i></a></p>
+      </div>
+      <div class="badge-anchor" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer" id="footer">
+  <div class="wrap">
+    <div class="footer__word" aria-hidden="true">TETHER</div>
+    <div class="footer__row">
+      <span>© 2026 Tether Studio. Concept site, fictional brand.</span>
+      <nav aria-label="Social"><a href="#">Instagram</a><a href="#">Behance</a><a href="#">LinkedIn</a></nav>
+      <a href="mailto:hello@tether.studio">hello@tether.studio</a>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
